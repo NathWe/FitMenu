@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "appTitle": "OpenNutriTracker",
   "appVersionName": "Version {versionNumber}",
   "appDescription": "OpenNutriTracker is a free and open-source calorie and nutrient tracker that respects your privacy.",

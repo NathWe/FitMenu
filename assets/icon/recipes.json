@@ -1,0 +1,539 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Menu 1",
+      "description": "Cake épinards/Emmental, Poulet au miel et à la sauce soja, Haricots verts, Mousse au chocolat",
+      "sections": [
+        {
+          "type": "Entrée",
+          "name": "Cake Epinards/Emmental",
+          "number_of_people": "8",
+          "ingredients": [
+            { "name": "farine", "quantity": "180g" },
+            { "name": "sachet de levure chimique", "quantity": "1/2 sachet" },
+            { "name": "Oeufs", "quantity": "3" },
+            { "name": "Lait", "quantity": "75 ml" },
+            { "name": "Huile", "quantity": "3 cuillères à soupe" },
+            { "name": "Epinards", "quantity": "200g" },
+            { "name": "Emmental", "quantity": "160g" },
+            { "name": "Persil", "quantity": "" },
+            { "name": "Ciboulette", "quantity": "" },
+            { "name": "Ail", "quantity": "1 gousse" },
+            { "name": "Sel", "quantity": "" },
+            { "name": "Poivre", "quantity": "" }
+          ],
+          "steps": [
+            "Préchauffez le four à 180°C.",
+            "Faites revenir les épinards dans une poêle avec 1 c à soupe d'huile, la gousse d'ail coupée en petits morceaux, persil et ciboulette.",
+            "Préparez la pâte à cake : mélangez la farine, la levure et les oeufs battus en omelette. Ajoutez le lait et 3 cuillères à soupe d'huile. Salez et poivrez.",
+            "Ajoutez le lait, l'huile et mélangez.",
+            "Ajoutez à la pâte les épinards et le fromage.",
+            "Beurrez un moule à cake et versez la préparation.",
+            "Faites cuire pendant 45 minutes."
+          ],
+          "nutritional_info-per-person": {
+            "calories": 231,
+            "féculents cuits": "22.5g",
+            "matière grasse": "5.6g",
+            "produit laitier": "20g",
+            "VPO": "0g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        },
+        {
+          "type": "Protéines",
+          "name": "Poulet grillé au miel et sauce soja",
+          "number_of_people": "8",
+          "ingredients": [
+            { "name": "Poulet", "quantity": "8 cuisses de poulet" },
+            { "name": "Oignons", "quantity": "2" },
+            { "name": "Moutarde", "quantity": "1 cuillère à soupe" },
+            { "name": "Miel", "quantity": "1 cuillère à soupe" },
+            { "name": "Sauce soja", "quantity": "3 cuillère à soupe" },
+            { "name": "Jus de citron", "quantity": "5 cuillère à soupe" },
+            { "name": "Vin blanc ou eau", "quantity": "200 ml" },
+            { "name": "Ail, oignon, échalotes", "quantity": "" },
+            { "name": "Thym, laurier", "quantity": "" }
+          ],
+          "steps": [
+            "Préparez dans un saladier la marinade en mélangeant la moutarde, le miel, le jus de citron, la sauce soja, du vin blanc ou de l'eau. Vous pouvez agrémenter cette marinade d'ail, oignons ou échalotes en petits morceaux ou en purée selon votre convenance.",
+            "Terminez cette préparation en ajoutant thym et laurier. Laissez mariner une quinzaine de minutes les cuisses de poulet.",
+            "Préchauffez le four à 180°C. Disposez les cuisses de poulet dans un plat allant au four. Versez la marinade sur les cuisses de poulet. Parsemez de thym et de laurier.",
+            "Enfournez pour 30 à 40 minutes de cuisson. Retournez les cuisses de poulet après 15 minutes de cuisson."
+          ],
+          "nutritional_info-per-person": {
+            "calories": 261,
+            "féculents cuits": "0g",
+            "matière grasse": "0g",
+            "produit laitier": "0g",
+            "VPO": "200g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        },
+        {
+          "type": "Féculents/Légumes",
+          "name": "Poelée de haricots verts",
+          "number_of_people": "8",
+          "ingredients": [
+            { "name": "Haricots verts", "quantity": "1,2 kg" },
+            { "name": "Oignons", "quantity": "1" },
+            { "name": "Huile d'olive", "quantity": "2 cuillères à soupe" },
+            { "name": "Herbes aromatiques", "quantity": "" },
+            { "name": "Sel", "quantity": "" },
+            { "name": "Poivre", "quantity": "" }
+          ],
+          "steps": [
+            "Faites revenir l'oignon avec l'huile dans une poêle, ajoutez-y les légumes et les herbes aromatiques, le sel, le poivre et 1 verre d'eau.",
+            "Laissez cuire à couvert jusqu'à consistance souhaitée."
+          ],
+          "nutritional_info-per-person": {
+            "calories": 76,
+            "féculents cuits": "0g",
+            "matière grasse": "3.75g",
+            "produit laitier": "0g",
+            "VPO": "0g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        },
+        {
+          "type": "Dessert",
+          "name": "Mousse au chocolat",
+          "ingredients": [
+            { "name": "Chocolat noir", "quantity": "160g" },
+            { "name": "Œufs", "quantity": "8 blancs" }
+          ],
+          "steps": [
+            "Faire fondre le chocolat au micro-onde ou au bain marie.",
+            "Monter les blancs en neige avec une pincée de sel.",
+            "Incorporez les blancs d'œufs au chocolat fondu.",
+            "Répartissez dans le fond d'un ravier la mousse au chocolat.",
+            "Placez au réfrigérateur pendant 2 heures."
+          ],
+          "nutritional_info-per-person": {
+            "calories": 117,
+            "féculents cuits": "0g",
+            "matière grasse": "1.88g",
+            "produit laitier": "0g",
+            "VPO": "0g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        }
+      ],
+      "total_per_person": {
+        "calories": 685,
+        "féculents cuits": "22.5g",
+        "matière grasse": "11.23g",
+        "produit laitier": "20g",
+        "VPO": "200g",
+        "fruits": "0g",
+        "pain": "0g"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Menu 2",
+      "description": "Carpaccio de melon menthe feta, Salade de boulgour aux tomates et feves, Fragaria à la crème de mascarponne",
+      "sections": [
+        {
+          "type": "Entrée",
+          "name": "Carpaccio de melon menthe feta",
+          "number_of_people": "8",
+          "ingredients": [
+            { "name": "Melon", "quantity": "700g" },
+            { "name": "Concombre", "quantity": "2" },
+            { "name": "Feta", "quantity": "120g" },
+            { "name": "Menthe ciselée", "quantity": "2 cuillères à soupe" },
+            { "name": "Vinaigre de cidre", "quantity": "2 cuillère à soupe" },
+            { "name": "Huile", "quantity": "4 cuillère à soupe" },
+            { "name": "Sel", "quantity": "" },
+            { "name": "Poivre", "quantity": "" }
+          ],
+          "steps": [
+            "Eplucher les concombres, retirer les graines a l'aide d'une petite cuillere et le passer e mandoline fine.",
+            "Couper les melons en deux, retirer les graines et éplucher-les. Débiter les en tranches fines si possible",
+            "Emietter la teta et la mélanger avec la menthe ciselée",
+            "Dans des assiettes, disposer les tranches de concombre et de melon en alternance par exemple ou selon votre creativite du moment. Nous mangeons avec les yeux avant de porter la nourriture en bouche !",
+            "Saler et poivrer vos assiettes, disposer le mélange feta puis le mélange vinaigre huile."
+          ],
+          "nutritional_info-per-person": {
+            "calories": 123.1,
+            "féculents cuits": "0g",
+            "matière grasse": "5,6g",
+            "produit laitier": "15g",
+            "VPO": "0g",
+            "fruits": "88g",
+            "pain": "0g"
+          }
+        },
+        {
+            "type": "Plat",
+            "name": "Salade de boulgour aux tomates et feves",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Boulgour cuit ou 280g cru", "quantity": "800g" },
+              { "name": "Fèves surgelées", "quantity": "400g" },
+              { "name": "Tomates cornues noires", "quantity": "5" },
+              { "name": "Tomate ananas", "quantity": "5" },
+              { "name": "Graines oléagineuses dee votre choix", "quantity": "30g" },
+              { "name": "Feuilles de basilic", "quantity": "15" },
+              { "name": "Jus de pommes", "quantity": "4 cuillères à soupe" },
+              { "name": "Vinaigre de cidre", "quantity": "2 cuillères à soupe" },
+              { "name": "Huile", "quantity": "6 cuillères à soupe" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Faire cuire le boulgour dans 2 fois son volume d'eau salée pendant 10min puis couvrir et laisser gontler.",
+              "Une fois refroidi, placer le boulgour au réfrigerateur",
+              "Laver les tomates, les épépiner, les couper en quartiers assez fins",
+              "Plonger les fèves pelees surgelées dans une casserole d'eau bouillante. Laisser cuire 2 à 6 minutes à partir de la reprise du frémissement puis égouttez",
+              "Dans un bol, mélanger l'huile, le vinaigre et le jus de pomme.",
+              "Dans une poele, torréfiez à sec les graines oléagineuses",
+              "Dans un saladier, mélanger le boulgour refroidi avec les tomates, les fèves et les graines. Ajouter la vinaigrette et rectifier l'assaisonnement en sel et poivre. Parsemer de feuilles de basilic"
+            ],
+            "nutritional_info-per-person": {
+            "calories": 284,
+            "féculents cuits": "100g",
+            "matière grasse": "11.25g",
+            "produit laitier": "0g",
+            "VPO": "12.5g",
+            "fruits": "125g",
+            "pain": "0g"
+          }
+        },
+          {
+            "type": "Dessert",
+            "name": "Fragaria à la crème de mascarponne",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Fraises", "quantity": "600g" },
+              { "name": "Mascarponne", "quantity": "160g" },
+              { "name": "Eau", "quantity": "50ml" },
+              { "name": "Fromage blanc", "quantity": "100g" },
+              { "name": "Sucre glace", "quantity": "35g" },
+              { "name": "Zeste de citron", "quantity": "" }
+            ],
+            "steps": [
+              "Disposer le mascarpone dans un saladler avec l'eau et commencer a battre le melange avec un batteur electrique puis progressivement introduire le sucre (40g). Arrêter lorsque le mascarpone est suffisamment monté",
+              "Introduire précautionneusement le tromage blanc pour obtenir un mélange homogène",
+              "Laver les fraises, les équeuter puis les couper en 4",
+              "Prelever le zeste d'un citron",
+              "Dresser les verrine avec une couche de crème, une couche de fraises puis superposer les couches si le cœur vous en dit.",
+              "Finir le dressage avec les zestes de citron."
+            ],
+            "nutritional_info-per-person": {
+                "calories": 145,
+                "féculents cuits": "0g",
+                "matière grasse": "11g",
+                "produit laitier": "32.5g",
+                "VPO": "0g",
+                "fruits": "75g",
+                "pain": "0g"
+            }
+            }
+  ],
+            "total_per_person": {
+                "calories": 552.1,
+                "féculents cuits": "100g",
+                    "matière grasse": "27.85g",
+                "produit laitier": "47.5g",
+        "VPO": "12.5g",
+                "fruits": "288g",
+        "pain": "0g"
+      }
+},
+{
+    "recipes": [
+      {
+        "id": 3,
+        "name": "Menu 3",
+        "description": "Tarte à la tomate, Brochette de dinde, Mélimelo aubergines poivrons, gaspacho nectarines / framboises",
+        "sections": [
+          {
+            "type": "Entrée",
+            "name": "Tarte à la tomate",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Farine", "quantity": "240g" },
+              { "name": "Beurre", "quantity": "80g" },
+              { "name": "Herbes de Provence", "quantity": "" },
+              { "name": "Levure chimique", "quantity": "1/2 sachet" },
+              { "name": "Tomates", "quantity": "6" },
+              { "name": "Moutarde", "quantity": "1 cuillères à soupe" },
+              { "name": "Gruyère râpé", "quantity": "120g" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Préchauffez le four à 200°C.",
+              "Préparez la pâte : mélangez la farine, la levure, le sel, les herbes de Provence",
+              "Ajoutez le beurre coupé en petits morceaux, puis l'eau pour obtenir une pâte homogène.",
+              "Laissez reposer la pâte 15min puis étalez la pâte. Badigeonnez la moutarde sur le fond de tarte et parsemez de gruyère.",
+              "Coupez les tomates en rondelle et ajoutez-les sur le fond de tarte",
+              "Faites cuire la tarte pendant 30 minutes."
+            ],
+            "nutritional_info-per-person": {
+              "calories": 285,
+              "féculents cuits": "30g",
+              "matière grasse": "15g",
+              "produit laitier": "15g",
+              "VPO": "0g",
+              "fruits": "75g",
+              "pain": "0g"
+            }
+          }
+        ]
+      },
+          {
+            "type": "Plat protéines",
+            "name": "Brochette de dinde",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "sauté de dinde", "quantity": "1,2kg" },
+              { "name": "basilic", "quantity": "1 botte" },
+              { "name": "Ail", "quantity": "2 gousses" },
+              { "name": "Piment", "quantity": "" },
+              { "name": "Sauce soja", "quantity": "" },
+              { "name": "Echalotes hâchées", "quantity": "" },
+              { "name": "Moutarde", "quantity": "" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Coupez la viande, puis installez les morceaux sur les pics a brochette.",
+              "Mixez chaque colonne separement pour faire 2 sauces différentes.",
+              "Nappez les brochettes des deux sauces"
+            ],
+            "nutritional_info-per-person": {
+            "calories": 185,
+            "féculents cuits": "0g",
+            "matière grasse": "3g",
+            "produit laitier": "0g",
+            "VPO": "150g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        },
+        {
+            "type": "Plat",
+            "name": "Mélimelo aubergines poivrons",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Aubergines", "quantity": "4" },
+              { "name": "Poivrons", "quantity": "3" },
+              { "name": "Ail", "quantity": "1 gousses" },
+              { "name": "Herbes de Provence", "quantity": "" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Lavez les légumes.",
+              "Epépinez les poivrons, coupez-les en lanieres. Faites les cuire au four 20 min.",
+              "Coupez les aubergines en lamelles, faites les revenir dans une poele avec de l'huile d'olive, salez poivrez.",
+              "Coupez les aubergines en lannières. Faites les blanchir au micro-onde.",
+              "Rassemblez poivrons et aubergines dans la poêle, assaisonnez avec ail, sel, poivre, herbes de Provence."
+            ],
+            "nutritional_info-per-person": {
+            "calories": 60,
+            "féculents cuits": "0g",
+            "matière grasse": "3g",
+            "produit laitier": "0g",
+            "VPO": "0g",
+            "fruits": "0g",
+            "légumes": "200g",
+            "pain": "0g"
+          }
+        },
+          {
+            "type": "Dessert",
+            "name": "Gaspacho nectarines / framboises",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Nectarines", "quantity": "6" },
+              { "name": "Framboises", "quantity": "250g" },
+              { "name": "Orange", "quantity": "1" },
+              { "name": "Jus de citro", "quantity": "" },
+              { "name": "Fromage blanc", "quantity": "4" },
+              { "name": "Menthe ou cannelle", "quantity": "" }
+            ],
+            "steps": [
+              "Pressez lorange et le citron.",
+              "Pelez les nectarines, coupez-les en 2 et dénoyautez-les.",
+              "Mixez-en 5 avec le fromage blanc, coupez la dernière en petit dés pour la décoration.",
+              "Mélangez la puree de nectarines avec le jus d agrumes.",
+              "Répartissez la purée dans des ramequins puis placez-les au refrigerateur.",
+              "Mixez les tramboises et passez le coulis au chinois.",
+              "Au moment de servir, versez le coulis de framboises dans les ramequins et décorez avec des dés de nectarines."
+            ],
+            "nutritional_info-per-person": {
+                "calories": 110,
+                "féculents cuits": "0g",
+                "matière grasse": "0,5g",
+                "produit laitier": "25g",
+                "VPO": "0g",
+                "fruits": "125g",
+                "pain": "0g"
+            }
+            }
+  ],
+            "total_per_person": {
+                "calories": 640,
+                "féculents cuits": "30g",
+                "matière grasse": "21,5g",
+                "produit laitier": "40g",
+                "VPO": "150g",
+                "fruits": "200g",
+                "légumes": "200g",
+                "pain": "0g"
+      }
+},
+{
+    "recipes": [
+      {
+        "id": 4,
+        "name": "Menu 4",
+        "description": "",
+        "sections": [
+          {
+            "type": "Entrée",
+            "name": "Tarte à la tomate",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Farine", "quantity": "240g" },
+              { "name": "Beurre", "quantity": "80g" },
+              { "name": "Herbes de Provence", "quantity": "" },
+              { "name": "Levure chimique", "quantity": "1/2 sachet" },
+              { "name": "Tomates", "quantity": "6" },
+              { "name": "Moutarde", "quantity": "1 cuillères à soupe" },
+              { "name": "Gruyère râpé", "quantity": "120g" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Préchauffez le four à 200°C.",
+              "Préparez la pâte : mélangez la farine, la levure, le sel, les herbes de Provence",
+              "Ajoutez le beurre coupé en petits morceaux, puis l'eau pour obtenir une pâte homogène.",
+              "Laissez reposer la pâte 15min puis étalez la pâte. Badigeonnez la moutarde sur le fond de tarte et parsemez de gruyère.",
+              "Coupez les tomates en rondelle et ajoutez-les sur le fond de tarte",
+              "Faites cuire la tarte pendant 30 minutes."
+            ],
+            "nutritional_info-per-person": {
+              "calories": 285,
+              "féculents cuits": "30g",
+              "matière grasse": "15g",
+              "produit laitier": "15g",
+              "VPO": "0g",
+              "fruits": "75g",
+              "pain": "0g"
+            }
+          }
+        ]
+      },
+          {
+            "type": "Plat protéines",
+            "name": "Brochette de dinde",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "sauté de dinde", "quantity": "1,2kg" },
+              { "name": "basilic", "quantity": "1 botte" },
+              { "name": "Ail", "quantity": "2 gousses" },
+              { "name": "Piment", "quantity": "" },
+              { "name": "Sauce soja", "quantity": "" },
+              { "name": "Echalotes hâchées", "quantity": "" },
+              { "name": "Moutarde", "quantity": "" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Coupez la viande, puis installez les morceaux sur les pics a brochette.",
+              "Mixez chaque colonne separement pour faire 2 sauces différentes.",
+              "Nappez les brochettes des deux sauces"
+            ],
+            "nutritional_info-per-person": {
+            "calories": 185,
+            "féculents cuits": "0g",
+            "matière grasse": "3g",
+            "produit laitier": "0g",
+            "VPO": "150g",
+            "fruits": "0g",
+            "pain": "0g"
+          }
+        },
+        {
+            "type": "Plat",
+            "name": "Mélimelo aubergines poivrons",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Aubergines", "quantity": "4" },
+              { "name": "Poivrons", "quantity": "3" },
+              { "name": "Ail", "quantity": "1 gousses" },
+              { "name": "Herbes de Provence", "quantity": "" },
+              { "name": "Sel", "quantity": "" },
+              { "name": "Poivre", "quantity": "" }
+            ],
+            "steps": [
+              "Lavez les légumes.",
+              "Epépinez les poivrons, coupez-les en lanieres. Faites les cuire au four 20 min.",
+              "Coupez les aubergines en lamelles, faites les revenir dans une poele avec de l'huile d'olive, salez poivrez.",
+              "Coupez les aubergines en lannières. Faites les blanchir au micro-onde.",
+              "Rassemblez poivrons et aubergines dans la poêle, assaisonnez avec ail, sel, poivre, herbes de Provence."
+            ],
+            "nutritional_info-per-person": {
+            "calories": 60,
+            "féculents cuits": "0g",
+            "matière grasse": "3g",
+            "produit laitier": "0g",
+            "VPO": "0g",
+            "fruits": "0g",
+            "légumes": "200g",
+            "pain": "0g"
+          }
+        },
+          {
+            "type": "Dessert",
+            "name": "Gaspacho nectarines / framboises",
+            "number_of_people": "8",
+            "ingredients": [
+              { "name": "Nectarines", "quantity": "6" },
+              { "name": "Framboises", "quantity": "250g" },
+              { "name": "Orange", "quantity": "1" },
+              { "name": "Jus de citro", "quantity": "" },
+              { "name": "Fromage blanc", "quantity": "4" },
+              { "name": "Menthe ou cannelle", "quantity": "" }
+            ],
+            "steps": [
+              "Pressez lorange et le citron.",
+              "Pelez les nectarines, coupez-les en 2 et dénoyautez-les.",
+              "Mixez-en 5 avec le fromage blanc, coupez la dernière en petit dés pour la décoration.",
+              "Mélangez la puree de nectarines avec le jus d agrumes.",
+              "Répartissez la purée dans des ramequins puis placez-les au refrigerateur.",
+              "Mixez les tramboises et passez le coulis au chinois.",
+              "Au moment de servir, versez le coulis de framboises dans les ramequins et décorez avec des dés de nectarines."
+            ],
+            "nutritional_info-per-person": {
+                "calories": 110,
+                "féculents cuits": "0g",
+                "matière grasse": "0,5g",
+                "produit laitier": "25g",
+                "VPO": "0g",
+                "fruits": "125g",
+                "pain": "0g"
+            }
+            }
+  ],
+            "total_per_person": {
+                "calories": 640,
+                "féculents cuits": "30g",
+                "matière grasse": "21,5g",
+                "produit laitier": "40g",
+                "VPO": "150g",
+                "fruits": "200g",
+                "légumes": "200g",
+                "pain": "0g"
+      }
+},

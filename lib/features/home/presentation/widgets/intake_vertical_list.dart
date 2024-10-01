@@ -31,7 +31,7 @@ class IntakeVerticalList extends StatefulWidget {
     required this.intakeList,
     this.onItemLongPressedCallback,
     this.onItemDragCallback,
-    this.onItemTappedCallback
+    this.onItemTappedCallback,
   });
 
   @override
@@ -50,7 +50,8 @@ class _IntakeVerticalListState extends State<IntakeVerticalList> {
   }
 
   double get totalKcal {
-    return widget.intakeList.fold(0, (previousValue, element) => previousValue + element.totalKcal);
+    return widget.intakeList
+        .fold(0, (previousValue, element) => previousValue + element.totalKcal);
   }
 
   @override
@@ -63,23 +64,25 @@ class _IntakeVerticalListState extends State<IntakeVerticalList> {
           child: Row(
             children: [
               Icon(widget.listIcon,
-                  size: 24, color: Theme.of(context).colorScheme.onBackground),
+                  size: 24, color: Theme.of(context).colorScheme.onSurface),
               const SizedBox(width: 4.0),
               Text(
                 widget.title,
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(color: Theme.of(context).colorScheme.onSurface),
               ),
               const Spacer(),
               if (totalKcal > 0)
-              Text(
-                '${totalKcal.toInt()} ${S.of(context).kcalLabel}',
-                style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onBackground
-                                        .withOpacity(0.7)),
-              ),
+                Text(
+                  '${totalKcal.toInt()} ${S.of(context).kcalLabel}',
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onSurface
+                          .withOpacity(0.7)),
+                ),
             ],
           ),
         ),
@@ -93,7 +96,6 @@ class _IntakeVerticalListState extends State<IntakeVerticalList> {
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.intakeList.length + 1,
-                // List length + placeholder card
                 itemBuilder: (BuildContext context, int index) {
                   final firstListElement = index == 0 ? true : false;
                   if (index == widget.intakeList.length) {
@@ -103,50 +105,65 @@ class _IntakeVerticalListState extends State<IntakeVerticalList> {
                         firstListElement: firstListElement);
                   } else {
                     final intakeEntity = widget.intakeList[index];
-                    return LongPressDraggable<IntakeEntity>(
-                      onDragStarted: () {
-                        widget.onItemDragCallback?.call(true);
-                      },
-                      onDragEnd: (details) {
-                        widget.onItemDragCallback?.call(false);
-                      },
-                      data: intakeEntity,
-                      feedback: Material(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                        ),
-                        child: Opacity(
-                          opacity: 0.7,
+                    return Stack(
+                      children: [
+                        LongPressDraggable<IntakeEntity>(
+                          onDragStarted: () {
+                            widget.onItemDragCallback?.call(true);
+                          },
+                          onDragEnd: (details) {
+                            widget.onItemDragCallback?.call(false);
+                          },
+                          data: intakeEntity,
+                          feedback: Material(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            child: Opacity(
+                              opacity: 0.7,
+                              child: IntakeCard(
+                                key: ValueKey(intakeEntity.meal.code),
+                                intake: intakeEntity,
+                                firstListElement: false,
+                              ),
+                            ),
+                          ),
+                          childWhenDragging: Row(
+                            children: [
+                              SizedBox(width: firstListElement ? 16 : 0),
+                              SizedBox(
+                                width: 120,
+                                height: 120,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                  ),
+                                  color: Theme.of(context).cardColor,
+                                ),
+                              ),
+                            ],
+                          ),
                           child: IntakeCard(
                             key: ValueKey(intakeEntity.meal.code),
                             intake: intakeEntity,
-                            firstListElement: false,
+                            onItemLongPressed: widget.onItemLongPressedCallback,
+                            onItemTapped: widget.onItemTappedCallback,
+                            firstListElement: firstListElement,
                           ),
                         ),
-                      ),
-                      childWhenDragging: Row(
-                        children: [
-                          SizedBox(width: firstListElement ? 16 : 0),
-                          SizedBox(
-                            width: 120,
-                            height: 120,
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
-                              ),
-                              color:
-                                  Theme.of(context).cardColor,
-                            ),
+                        // Ajout de l'icône de suppression
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: IconButton(
+                            icon: const Icon(Icons.delete, color: Colors.red),
+                            onPressed: () {
+                              _confirmDelete(context,
+                                  intakeEntity); // Fonction de suppression
+                            },
                           ),
-                        ],
-                      ),
-                      child: IntakeCard(
-                        key: ValueKey(intakeEntity.meal.code),
-                        intake: intakeEntity,
-                        onItemLongPressed: widget.onItemLongPressedCallback,
-                        onItemTapped: widget.onItemTappedCallback,
-                        firstListElement: firstListElement,
-                      ),
+                        ),
+                      ],
                     );
                   }
                 },
@@ -174,5 +191,30 @@ class _IntakeVerticalListState extends State<IntakeVerticalList> {
     // Refresh Diary Page
     locator<DiaryBloc>().add(const LoadDiaryYearEvent());
     locator<CalendarDayBloc>().add(LoadCalendarDayEvent(DateTime.now()));
+  }
+
+  void _confirmDelete(BuildContext context, IntakeEntity intake) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Supprimer cet élément?"),
+        content: const Text("Voulez-vous vraiment supprimer cet aliment?"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(), // Annuler
+            child: const Text("Annuler"),
+          ),
+          TextButton(
+            onPressed: () {
+              _homeBloc.deleteIntakeItem(intake);
+              Navigator.of(context).pop();
+              _homeBloc.add(
+                  const LoadItemsEvent()); // Recharge la liste après suppression
+            },
+            child: const Text("Supprimer"),
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:logging/logging.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:logging/logging.dart';
 import 'package:opennutritracker/core/domain/entity/intake_type_entity.dart';
 import 'package:opennutritracker/core/presentation/widgets/error_dialog.dart';
 import 'package:opennutritracker/core/utils/locator.dart';
@@ -19,11 +19,10 @@ class ScannerScreen extends StatefulWidget {
 
 class _ScannerScreenState extends State<ScannerScreen> {
   final log = Logger('ScannerScreen');
-
   String? _scannedBarcode;
   late IntakeTypeEntity _intakeTypeEntity;
   late DateTime _day;
-
+  final MobileScannerController cameraController = MobileScannerController();
   late ScannerBloc _scannerBloc;
 
   @override
@@ -54,10 +53,15 @@ class _ScannerScreenState extends State<ScannerScreen> {
               body: const Center(child: CircularProgressIndicator()));
         } else if (state is ScannerLoadedState) {
           // Push new route after build
-          Future.microtask(() => Navigator.of(context).pushReplacementNamed(
-              NavigationOptions.mealDetailRoute,
-              arguments: MealDetailScreenArguments(
-                  state.product, _intakeTypeEntity, _day)));
+          Future.microtask(() {
+            if (mounted) {
+              Navigator.of(context).pushReplacementNamed(
+                NavigationOptions.mealDetailRoute,
+                arguments: MealDetailScreenArguments(
+                    state.product, _intakeTypeEntity, _day),
+              );
+            }
+          });
         } else if (state is ScannerFailedState) {
           return Scaffold(
               appBar: AppBar(),
@@ -71,29 +75,23 @@ class _ScannerScreenState extends State<ScannerScreen> {
                 ),
               ));
         }
-        return const SizedBox();
+        return const SizedBox(); // Ajout d'un widget par défaut
       },
     );
   }
 
   Scaffold _getScannerContent(BuildContext context) {
-    final cameraController = MobileScannerController();
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).scanProductLabel),
         actions: [
           IconButton(
-            icon: ValueListenableBuilder(
-              valueListenable: cameraController.torchState,
-              builder: (context, state, child) {
-                switch (state) {
-                  case TorchState.off:
-                    return const Icon(Icons.flash_off_outlined,
-                        color: Colors.grey);
-                  case TorchState.on:
-                    return const Icon(Icons.flash_on_outlined);
-                }
-              },
+            icon: Icon(
+              cameraController.torchEnabled
+                  ? Icons.flash_on_outlined
+                  : Icons.flash_off_outlined,
+              color:
+                  cameraController.torchEnabled ? Colors.yellow : Colors.grey,
             ),
             onPressed: () => cameraController.toggleTorch(),
           ),
@@ -104,22 +102,23 @@ class _ScannerScreenState extends State<ScannerScreen> {
         ],
       ),
       body: MobileScanner(
-          controller: cameraController,
-          onDetect: (capture) {
-            final List<Barcode> barcodes = capture.barcodes;
-            for (final barcode in barcodes) {
-              if (barcode.rawValue != null &&
-                  barcode.type == BarcodeType.product) {
-                final barcodeResult = barcode.rawValue;
-                if (barcodeResult != null) {
-                  _scannedBarcode = barcodeResult;
-                  log.fine('Barcode found: $barcodeResult');
-                  _scannerBloc
-                      .add(ScannerLoadProductEvent(barcode: barcodeResult));
-                }
+        controller: cameraController,
+        onDetect: (capture) {
+          final List<Barcode> barcodes = capture.barcodes;
+          for (final barcode in barcodes) {
+            if (barcode.rawValue != null &&
+                barcode.type == BarcodeType.product) {
+              final barcodeResult = barcode.rawValue;
+              if (barcodeResult != null) {
+                _scannedBarcode = barcodeResult;
+                log.fine('Barcode found: $barcodeResult');
+                _scannerBloc
+                    .add(ScannerLoadProductEvent(barcode: barcodeResult));
               }
             }
-          }),
+          }
+        },
+      ),
     );
   }
 
@@ -129,7 +128,8 @@ class _ScannerScreenState extends State<ScannerScreen> {
       _scannerBloc.add(ScannerLoadProductEvent(barcode: barcode));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(S.of(context).errorFetchingProductData)));
+        SnackBar(content: Text(S.of(context).errorFetchingProductData)),
+      );
     }
   }
 }

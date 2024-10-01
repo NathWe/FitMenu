@@ -1,4 +1,5 @@
 {
+  "@@locale": "tr",
   "appTitle": "OpenNutriTracker",
   "appVersionName": "Sürüm {versionNumber}",
   "appDescription": "OpenNutriTracker, gizliliğinize saygı duyan ücretsiz ve açık kaynaklı bir kalori ve besin takip programıdır.",
@@ -375,6 +376,6 @@
   "paSkiingGeneral": "kayak yapma",
   "paSkiingGeneralDesc": "genel",
   "paSnowShovingModerate": "kar küreme",
-  "paSnowShovingModerateDesc": "elle, ılımlı çaba",
+  "paSnowShovingModerateDesc": "elle, ılımlı çaba"
 
 }
